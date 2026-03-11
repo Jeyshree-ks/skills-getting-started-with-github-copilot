@@ -99,11 +99,8 @@ def signup_for_activity(activity_name: str, email: str):
     activity = activities[activity_name]
 
     # Validate student is not already signed up
-<<<<<<< HEAD
     if email in activity["participants"]:
         raise HTTPException(status_code=400, detail="Student is already signed up for this activity")
-=======
->>>>>>> 29a8192 (Add extracurricular activities and signup validation to the API)
 
     # Add student
     activity["participants"].append(email)
